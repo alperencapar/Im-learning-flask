@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Blog</title>
+    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+            <!-- CSS -->
+    <!-- CSS dosyaları static adlı klasörde tutuluyor. Klasörün yeri değişebileceği için flask fonksiyonu ile otomatik olarak yerini buluyoruz -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css',version=0.2) }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css' ,version=3.01) }}">
+    <link rel="stylesheet" media="(max-width: 1100px)" href="{{ url_for('static', filename='css/mobile.css') }}">
+    <!-- Flask ile css dosyalarını güncellemek için(tarayıcıda görmek) version keyini kullanabiliriz -->
+
+
+</head>
+<body>
+    
+    {% include "includes/navbar.html" %} 
+
+    <div class="container">
+        {% include "includes/messages.html" %}  {# herhangi bir mesajımız olduğu zaman görüntülenecek #}
+
+        {% block body %}
+            
+
+        {% endblock body %}
+    </div>
+    
+
+  
+
+
+    <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

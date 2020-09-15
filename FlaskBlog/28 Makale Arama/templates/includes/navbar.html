@@ -1,0 +1,32 @@
+<!-- Üst NavBar buraya yazıldı -->
+<nav>
+    <div class="container">
+        <div class="nav-container">
+            <ul class="logo-place">
+                <li ><a href="/"class="btn">Logo.net</a></li>
+            </ul>
+  
+            <ul class="nav-items">
+                <li><a href="/about" class="btn">Hakkımda</a></li>
+                <li><a href="/articles" class="btn">Makaleler</a></li>
+                <li><a href="" class="btn">Tanıtım</a></li>
+            </ul>
+            <ul>
+                <!-- session projenin her yerinde erişilebilir -->
+                <!-- logged_in True(giriş yapılmış) ise Çıkış yap butonu görüntülenecek. Giriş yapılmamış ise Giriş butonu görüntülenecek -->
+                {% if session["logged_in"] %}
+                <li><a href="/dashboard" class="btn">Panel</a></li>
+                <li><a href="/logout" class="btn">Çıkış</a></li>
+
+                {% else %}
+                <li><a href="/login" class="btn">Giriş</a></li>
+                <li><a href="/register" class="btn">Kaydol</a></li>
+
+                {% endif %}
+
+                
+            </ul>
+        </div>
+    </div>
+  </nav>
+  

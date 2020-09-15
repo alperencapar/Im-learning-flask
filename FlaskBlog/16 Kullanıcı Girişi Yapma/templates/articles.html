@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+            
+    <ul class="">
+        {% for article in articles %}
+        <li>Article Id: {{article.id}} - Title: {{article.title}} - Content: {{article.content}}</li>
+        {% endfor %}
+
+    </ul>
+
+{% endblock body %}

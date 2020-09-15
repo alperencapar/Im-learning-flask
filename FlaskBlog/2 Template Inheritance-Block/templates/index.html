@@ -1,0 +1,14 @@
+<!-- index.html, layout.html'den kalıtım yapıyor -->
+{% extends "layout.html" %}
+
+
+
+{% block alp %} {# alp adlı bloğun içeriğini değiştirmek istediğimizi söylüyoruz#}
+<p>Burası Index</p>
+{% endblock %}
+
+
+
+{% block title %}   {#inherit yaptığımız sayfadaki title bloğunun içeriğini değiştirdik #}
+Index - Anasayfa
+{% endblock title %}

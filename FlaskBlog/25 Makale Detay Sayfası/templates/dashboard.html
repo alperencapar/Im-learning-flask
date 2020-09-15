@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h2>Kontrol Paneli</h2>
+<small style="display:block">Hoşgeldin, {{session["username"]}}</small>
+<hr>
+<br>
+<a href="/addarticle" class="btn bg-light-blue">Makale Ekle</a>
+
+{% if articles %}
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Başlık</th>
+      <th scope="col">Yazar</th>
+      <th scope="col">Tarih</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for article in articles  %}
+        <tr>
+        <th scope="row">{{article.id}}</th>
+        <td><a href="/article/{{article.id}}">{{article.title}}</a></td>
+        <td>{{article.author}}</td>
+        <td>{{article.created_date}}</td>
+        <td><a href="/edit/{{article.id}}" class="btn btn-danger">Güncelle</a></td>
+        <td><a href="/delete/{{article.id}}"class="btn btn-danger">Sil</a></td>
+        </tr>
+      {% endfor %}
+
+    <!-- <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr> -->
+    
+  </tbody>
+</table>
+
+
+{% else %}
+<div class="alert alert-danger">Makale bulunmuyor</div>
+{% endif %}
+
+
+{% endblock body %}

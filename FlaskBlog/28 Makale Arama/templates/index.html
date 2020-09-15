@@ -1,0 +1,63 @@
+<!-- layout.html bu sayfaya bağlandı -->
+<!-- inherit haritası :    navbar.html ====>> layout.html ====>> index.html -->
+{% extends 'layout.html' %}
+
+
+
+{% block body %}    {# layout kısmında oluşturduğumuz body isimli bloğun içeriğini burada değiştiriyoruz #}
+<section class="welcome-section">
+    <div class="container">
+        <div class="welcome-heading">
+          <h2 class="text-center heading-big light-blue">Bloğuma hoşgeldiniz</h2>
+        </div>
+        <div class="welcome-article text-center">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Tempora, fuga doloremque. Esse nostrum inventore quasi vel et adipisci officiis sint ex voluptatum ab possimus, 
+                mollitia amet molestiae omnis numquam repudiandae praesentium cum a perferendis accusantium in necessitatibus dolores. 
+                Veniam iste maxime distinctio in deleniti exercitationem sit ipsa quae pariatur, 
+                tempore reprehenderit magnam magni temporibus soluta eaque architecto provident non fugit eos porro hic id est commodi! 
+                Debitis sit nobis deleniti et explicabo commodi temporibus odio vitae numquam, 
+                repudiandae optio, dolores nisi voluptate suscipit iste nihil aliquid aperiam ad est accusamus amet totam quidem! 
+                Obcaecati magnam, 
+                iste iusto suscipit quas incidunt praesentium tempora qui ab alias dolor facere voluptatibus aliquam similique deserunt vel corporis voluptatum, 
+                delectus nobis nihil aperiam neque? Illum iste neque dignissimos suscipit! 
+                Necessitatibus illo odit odio! Voluptatibus dolor eum quia ducimus, 
+                iusto nesciunt illum cum consequuntur reiciendis laborum placeat amet provident numquam harum sed blanditiis. 
+                Consectetur illum expedita ab corporis tempore consequatur excepturi fugit, rem aperiam, autem accusantium quia, 
+                eos adipisci nihil non. Magni blanditiis ab molestias harum totam. 
+                Soluta consectetur odit itaque quia, odio non esse ratione suscipit, numquam repellendus tempora dolor fugit aperiam distinctio placeat explicabo maiores. 
+                Repellendus ullam aperiam dolor quos repellat veritatis. Minima consequatur, dolor autem, at debitis atque quibusdam magni, 
+                suscipit animi accusantium natus quasi aspernatur vero veritatis enim ab neque. 
+                Voluptatum quas perferendis in similique quidem eos dolorum accusamus voluptatem ut commodi, 
+                nisi obcaecati soluta maiores id, error labore voluptas recusandae nostrum tenetur officiis debitis aspernatur optio? 
+                Consequatur recusandae, provident in beatae necessitatibus commodi aperiam rerum, 
+                nihil nostrum aut fugit ratione pariatur.  </p>
+        </div>
+    </div>
+</section>
+
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th class="text-center">Makaleler</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for article in articles %}
+    
+    
+        <tr>
+        <a href="/article/{{article.id}}"></a><td>{{article.title}}</td></a>
+        </tr>
+
+    {% endfor %}
+    </tbody>
+    </table>
+
+
+
+{% endblock body %}
+
+

@@ -1,0 +1,86 @@
+@media screen and (max-width: 1920px){
+    .container{
+        max-width: 1366px;
+        margin: auto;
+
+    }
+}
+
+@media screen and (min-width: 1368px){
+    .container{
+        max-width: 1140px;
+
+    }
+}
+
+
+
+@media screen and (max-width: 1366px){
+    
+    .container{
+        max-width: 1140px;
+        
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.heading-small{
+    font-size: 1.25rem;
+}
+.heading-medium{
+    font-size: 1.5rem;
+}
+.heading-big{
+    font-size: 1.75rem;
+}
+
+/*A etiketi*/
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+a:visited{ 
+    text-decoration:none; 
+}
+
+/*Ul li*/
+ul li{
+    list-style-type: none;
+}
+
+/* COLOR */
+
+.bg-dark-blue{
+    background-color: #062e51;
+}
+.bg-light-blue{
+    background-color: #336ea2;
+}
+
+.font-white{
+    color: #fff;
+}
+
+
+/**************/
+
+
+
+
+
+
+
+
+

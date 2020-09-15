@@ -1,0 +1,101 @@
+nav{
+    width: 100%;
+    background-color: #30302f;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    
+
+    
+}
+
+.container{
+    width: 100%;
+    
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+}
+
+.logo-place{
+    width: 25%;
+}
+
+nav .nav-items{
+    width: 75%;
+    justify-content: flex-end;
+
+    
+
+}
+
+nav ul li{
+    padding-right: 1.5rem;
+    color: #fff;
+}
+
+nav ul li a{
+    padding: 1rem 2rem;
+    /* background-color: ; */
+}
+
+nav ul li a:hover{
+    background-color: #6c757d;
+    border-radius: 8px;
+    color: #fd7e14;
+    transition: all 0.6s;
+    
+
+
+}
+
+
+/* *************************** SECTION WELCOME *************************** */
+
+.welcome-section{
+    margin-top: 1.5rem;
+}
+
+.welcome-section h2{
+    font-weight: 900;
+}
+
+
+.welcome-section .container{
+    background-color: #b5b4af;
+    padding: 4rem 6rem;
+
+}
+
+
+.welcome-section .welcome-article{
+    line-height: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/**/
+
+
+.btn{
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 1rem;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    opacity: 0.8;
+
+}
+
+
+

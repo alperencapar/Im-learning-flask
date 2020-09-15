@@ -1,0 +1,2 @@
+Öğrenmek amaçlı yapılan her işlemden sonra yeni dosya oluşturup numara verildi.
+Öğrenme hızını arttırsa da dosya boyutunu arttırıyor
